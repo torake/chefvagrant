@@ -16,6 +16,9 @@
       "boot_wait": "5s",
       "boot_command": [ "linux text nolapic ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos5base_vbox.ks ksdevice=eth0",
         "<enter>"
+      ],
+      "vboxmanage": [
+        [ "modifyvm", "{{ .Name }}", "--longmode", "on" ]
       ]
     }
   ],

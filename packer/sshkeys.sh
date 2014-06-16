@@ -8,5 +8,6 @@ chown -R vagrant:wheel /home/vagrant/.ssh
 sed -i /packer.localhost/d /root/.ssh/authorized_keys2
 
 sed -i '/NOPASSWD/s/# %wheel/%wheel/' /etc/sudoers
+sed -i '/Defaults.*requiretty/d' /etc/sudoers
 
 exit 0

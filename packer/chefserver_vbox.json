@@ -3,6 +3,7 @@
     {
       "name": "chefserver-virtualbox",
       "type": "virtualbox-iso",
+      "guest_os_type": "RedHat_64",
       "iso_url": "file:///Users/thorduri/Downloads/CentOS-5.10-x86_64-bin-1of9.iso",
       "iso_checksum": "f0da23ad8c4813adc03fd1ff4bdd2924",
       "iso_checksum_type": "md5",

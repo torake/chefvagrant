@@ -31,5 +31,9 @@
         "cleanup.sh"
       ]
     }
+  ],
+
+  "post-processors": [
+    "vagrant"
   ]
 }

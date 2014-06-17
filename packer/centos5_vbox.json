@@ -29,6 +29,7 @@
       "scripts": [
         "chef.sh",
         "sshkeys.sh",
+        "virtualbox.sh",
         "cleanup.sh"
       ]
     }

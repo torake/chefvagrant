@@ -15,9 +15,6 @@
       "boot_wait": "5s",
       "boot_command": [ "linux text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos5base.ks ksdevice=eth0",
         "<enter>"
-      ],
-      "vboxmanage": [
-        [ "modifyvm", "{{ .Name }}", "--longmode", "on" ]
       ]
     }
   ],
@@ -26,9 +23,9 @@
     {
       "type": "shell",
       "scripts": [
-        "chef.sh",
-        "sshkeys.sh",
-        "cleanup.sh"
+        "provision/chef.sh",
+        "provision/sshkeys.sh",
+        "provision/cleanup.sh"
       ]
     }
   ]

@@ -2,6 +2,7 @@
   "builders": [
     {
       "type": "vmware-iso",
+      "name": "chefserver-vmware",
       "iso_url": "http://gw253.scmv-internal/isos/centos5/CentOS-5.10-x86_64-bin-1of9.iso",
       "iso_checksum": "f0da23ad8c4813adc03fd1ff4bdd2924",
       "iso_checksum_type": "md5",
@@ -15,9 +16,6 @@
       "boot_wait": "5s",
       "boot_command": [ "linux text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos5base.ks ksdevice=eth0",
         "<enter>"
-      ],
-      "vboxmanage": [
-        [ "modifyvm", "{{ .Name }}", "--longmode", "on" ]
       ]
     }
   ],
@@ -26,9 +24,9 @@
     {
       "type": "shell",
       "scripts": [
-        "chefserver.sh",
-        "sshkeys.sh",
-        "cleanup.sh"
+        "provision/chefserver.sh",
+        "provision/sshkeys.sh",
+        "provision/cleanup.sh"
       ]
     }
   ]

@@ -28,10 +28,10 @@
     {
       "type": "shell",
       "scripts": [
-        "chef.sh",
-        "sshkeys.sh",
-        "virtualbox.sh",
-        "cleanup.sh"
+        "provision/chef.sh",
+        "provision/sshkeys.sh",
+        "provision/virtualbox.sh",
+        "provision/cleanup.sh"
       ]
     }
   ],

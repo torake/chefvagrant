@@ -14,7 +14,8 @@
       "headless": false,
       "http_directory": "httpdir",
       "boot_wait": "5s",
-      "boot_command": [ "linux text nolapic ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos5base_vbox.ks ksdevice=eth0",
+      "boot_command": [
+        "linux text nolapic ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos_ks.cfg ksdevice=eth0",
         "<enter>"
       ],
       "vboxmanage": [

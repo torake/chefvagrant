@@ -40,7 +40,7 @@
     {
       "type": "vagrant",
       "output": "centos5.box",
-      "keep_input_artifact": true
+      "keep_input_artifact": false
     }
   ]
 }

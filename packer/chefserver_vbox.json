@@ -19,7 +19,8 @@
         "<enter>"
       ],
       "vboxmanage": [
-        [ "modifyvm", "{{ .Name }}", "--longmode", "on" ]
+        [ "modifyvm", "{{ .Name }}", "--longmode", "on" ],
+        [ "modifyvm", "{{ .Name }}", "--memory", "1536" ]
       ]
     }
   ],
